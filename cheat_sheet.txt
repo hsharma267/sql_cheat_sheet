@@ -1,0 +1,94 @@
+==========================================XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX================================================
+							    Open SQL
+==========================================XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX================================================
+
+1.) C:\>cd xampp\mysql\bin>
+2.) C:\xampp\mysql\bin>mysql -u root -p -h localhost
+    Enter password:
+    MariaDB [(none)]>
+    Ctrl + C // to end the sessions
+3.) Open your Chrome browers
+   	In the search bar write localhost/phpmyadmin 
+
+
+==========================================XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX================================================
+							       SQL
+==========================================XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX================================================
+
+1.)  MariaDB [(none)]> Show Databases;
+2.)  MariaDB [(none)]> Create Database <DatabaseName>;
+3.)  MariaDB [(none)]> Drop Database <DatabaseName>;
+4.)  MariaDB [(none)]> Use <DatabaseName>;
+5.)  MariaDB [(none)]> Select Database();
+6.)  MariaDB [(none)]> Create table table_name(Column_name data_type,Column_name data_type);
+7.)  MariaDB [(none)]> Show tables;
+8.)  MariaDB [(none)]> Desc <table_name>;
+9.)  MariaDB [(none)]> Show Columns from <table_name>;
+10.) MariaDB [(none)]> Drop table <table_name>;
+11.) MariaDB [(none)]> Insert table table_name(Column1,Column2,Column3,...) Values(Value1,Value2,Value3,...);
+12.) MariaDB [(none)]> Insert table table_name values(Value1,Value2,Value3,...);
+13.) MariaDB [(none)]> Select * from <table_name>;
+14.) MariaDB [(none)]> Show Warnings;
+15.) MariaDB [(none)]> Create table <table_name>(Column_name data_type not null, Column_name data_type not null);
+16.) MariaDB [(none)]> Create table <table_name>(Column_name data_type not null default value, Column_name data_type not null);
+17.) MariaDB [(none)]> Alter table <table_name> Add Column_name data_type not null default 0;
+18.) MariaDB [(none)]> Alter table <table_name> Drop Column Column_name;
+19.) MariaDB [(none)]> Create table <table_name>(Column_name data_type not null,Column_name data_type, primary key(Column_name));
+20.) MariaDB [(none)]> Create table <table_name>(Column_name data_type Auto_increment,Column_name data_type not null default 					0,Primary key(Column_name data_type) );
+
+==========================================XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX================================================
+							       MYSQL
+==========================================XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX================================================
+
+21.) MariaDB [(none)]> Create table <table_name>(Column_name data_type Auto_increment,Column_name data_type not null default 					0,Primary key(Column_name data_type) );
+22.) MariaDB [(none)]> Select * from <table_name> Where Clause;
+23.) MariaDB [(none)]> Select * from <table_name>(Column1,Column2,Column3,...) Where Clause;
+24.) MariaDB [(none)]> Update <table_name> Set(Column = value) where (Column = value);
+25.) MariaDB [(none)]> Delete from <table_name> Where (Column = value);
+26.) MariaDB [(none)]> Delete from <table_name> // all records deleted but not completely
+27.) MariaDB [(none)]> Truncate <table_name> // all records deleted completely
+28.) MariaDB [(none)]> Select Distinct Column1 from <table_name>;
+29.) MariaDB [(none)]> Select * from <table_name> Order By Column1;
+30.) MariaDB [(none)]> Select * from <table_name> Order By Column1 desc;
+31.) MariaDB [(none)]> Select * from <table_name> Order By Column1 limit Number;
+32.) MariaDB [(none)]> Select * from <table_name> Order By Column1 limit Number OFFSET Number;
+33.) MariaDB [(none)]> Select * from <table_name> Where Column1 like '%an%';
+34.) MariaDB [(none)]> Show errors;
+35.) MariaDB [(none)]> Select min(Column1) from <table_name>;
+35.) MariaDB [(none)]> Select max(Column1) from <table_name>;
+36.) MariaDB [(none)]> Select count(Column1) from <table_name>;
+37.) MariaDB [(none)]> Select sum(Column1) from <table_name>;
+39.) MariaDB [(none)]> Select avg(Column1) from <table_name>;
+40..) MariaDB [(none)]> Select * from <table_name> Where Column1 is NOT equal to Value1;
+41.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Greater than Value1;
+42.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Greater than equal to Value1;
+43.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Less than Value1;
+44.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Less than equal to Value1;
+45.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Less than equal to Value1 OR Column1 is Greater than equal to 			Value2;
+46.) MariaDB [(none)]> Select * from <table_name> Where Column1 between value1 and value2;
+47.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Less than equal to Value1 || Column1 is Greater than equal to 				Value2;
+48.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Less than equal to Value1 AND Column1 is Greater than equal to 				Value2;
+49.) MariaDB [(none)]> Select * from <table_name> Where Column1 is Less than equal to Value1 && Column1 is Greater than equal to 				Value2;
+50.) MariaDB [(none)]> Select * from <table_name> Where Column1 = Value1 OR Column2 = Value1;
+51.) MariaDB [(none)]> Select * from <table_name> Where In(Column1 = Value1,Column2 = Value1);
+52.) MariaDB [(none)]> Select * from <table_name> Where Column1 = Value1 AND Column2 = Value1;
+53.) MariaDB [(none)]> Select * from <table_name> Where Not In(Column1 = Value1,Column2 = Value1);
+54.) MariaDB [(none)]> Select Concat('Column1','Column2');
+55.) MariaDB [(none)]> Select Concat('Column1','Column2') as Anyname;  // like anyname means fullname
+56.) MariaDB [(none)]> Select Concat(Column1,' ',Column2) from <table_name> AS Anyname;
+57.) MariaDB [(none)]> Select Reverse('Column1');
+58.) MariaDB [(none)]> Select Reverse('Column1') as Anyname;
+59.) MariaDB [(none)]> Select Concat('Column_name',' ',Reverse('Column1')) AS Palindrome;
+60.) MariaDB [(none)]> Select Char_Length('Column1');
+61.) MariaDB [(none)]> Select Lcase('Column_name');
+62.) MariaDB [(none)]> Select Ucase('Column_name');
+63.) MariaDB [(none)]> Create table datestud(name varchar(55),dob date,dot time,bt datetime);
+64.) MariaDB [(none)]> Insert into <table_name> Values('Column_name','DOB','DOT','Both DOB,DOT'); // it is very 							difficult to write
+65.) MariaDB [(none)]> Insert into <table_name> Values('harish',curdate(),curtime(),now() );
+66.) MariaDB [(none)]> Create table <table_name1>(Column_name data_type Not null Auto_increment Primary key,Column_name 					data_type,Column_name data_type );
+67.) MariaDB [(none)]> Create table <table_name2>(Column_name data_type Not null Auto_increment Primary key,Column_name 					data_type,Column_name data_type, foreign key(Column_name) references <table_name1>(Column_name));
+68.) MariaDB [(none)]> Select * from <table_name1>,<table_name2> where <table_name1>.Column_name = <table_name1>.Column_name;
+69.) MariaDB [(none)]> Select * from <table_name1> Join <table_name2> ON <table_name1>.Column_name = <table_name1>.Column_name; 
+			//By default inner join
+70.) MariaDB [(none)]> Select Column_name1,Column_name2,Column_name,<table_name2>.Column_name from customers left join <table_name1> on 				<table_name2>.Column_name = <table_name2>.Column_name;
+71.) MariaDB [(none)]> Select Column_name1,Column_name2,Column_name,<table_name2>.Column_name from customers right join <table_name1> on 				<table_name2>.Column_name = <table_name2>.Column_name;
